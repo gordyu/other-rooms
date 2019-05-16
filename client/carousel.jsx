@@ -1,19 +1,43 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
 import Home from './home.jsx'
 
-var Home = (props) => (
-  <div className='home'>
-    <button className='favorite'>Favorite(get me inside image)</button>
-    <div className='homeImg'>IMAGE</div>
-    <span className='text'>
-      <span className='mediumText'>
-        <span>Name</span>
-        <span className='textDot'></span>
-        <span>Location</span>
-      </span>
-      <div className='tinyDescribe'>Mini description</div>
-      <div classname='smallertext'>Price</div>
-      <div className></div>
-      <div className='ratings'></div>
-    </span>
-  </div>
-)
+//holds individual homes, might be refactored to stateless if no state is required
+class Carousel extends React.Component{
+  constructor(props){
+    super(props)
+
+      this.state = {
+        //possibly need to maintain the motion of the carousel, otherwise may not need to be stateful
+      }
+  }
+
+  render() {
+    return (
+      <div>
+        {/*
+        {this.props.homes.map((home) => {
+          return <Home 
+          type={home.type}
+          description={home.description}
+          location={home.location}
+          rating={home.rating}
+          numRatings={home.numRatings}
+          price={home.price}
+          image={home.image}
+          />
+        })}
+         */}
+        <Home />
+        <Home />
+        <Home />
+        <Home />
+        <Home />
+        <Home />
+      </div>
+    )
+  }
+
+}
+
+export default Carousel
