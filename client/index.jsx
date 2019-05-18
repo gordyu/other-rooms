@@ -14,6 +14,7 @@ class App extends React.Component {
     }
   }
 
+  //make request to api for related homes and populate state
   getRelated() {
     fetch('http://localhost:3001/related')
     .then((result) => {
