@@ -4,6 +4,7 @@ import Carousel from './carousel.jsx'
 //import X from 'Y'
 
 //holds the currents related homes in state and renders a Carousel with those databse objects passed in. makes get request with fetch to API to populate the related array
+// needs to be declared with a home object denoting the current item page for the sake of deciding relation
 class App extends React.Component {
   constructor(props){
     super(props)
@@ -13,10 +14,21 @@ class App extends React.Component {
     }
   }
 
-  // componentDidMount() {
-    //fetch related homes, setState
-    //fetch(localhost:3001/related)
-  // }
+  getRelated() {
+    fetch('http://localhost:3001/related')
+    .then((result) => {
+      return result.json()
+    })
+    .then((parsed) => {
+      this.setState({
+        related: parsed
+      })
+    })
+  }
+
+  componentDidMount() {
+    this.getRelated()
+  }
 
   render() {
     return (

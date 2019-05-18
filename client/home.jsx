@@ -6,38 +6,34 @@ var Home = (props) => (
   <div className='home'>
     <button className='favorite'>Favorite(get me inside image)</button>
     {/* onClick={launch modal for sign in} */}
-    <div className='homeImg'>IMAGE</div>
-    {/* this.props.image*/}
+    <div className='homeImg'> 
+    <img src={props.image}></img>
+    </div>
     <span className='text'>
       <span className='nameAndLoc'>
         <span className='mediumText'>
-          <span>Type</span>
-          {/* this.props.type*/}
+          <span>{props.type}</span>
           <span className='textDot'>*</span>
-          <span>Location</span>
-          {/* this.props.location*/}
+          <span>{props.location}</span>
         </span>
       </span>
       <div className='miniDescribe'>
         <div className='boldMediumText'>
-          <div>Mini description</div>
-          {/* this.props.description */}
+          <div>{props.description}</div>
         </div>
       </div>
       <div className='price'>
         <div className='smallertext'>
-          <div>Price</div>
-          {/* this.props.price*/}
+          <div>{props.price}</div>
         </div>
       </div>
       <div className='ratings'>
         <span className='stars'>
-          <span>*****</span>
+          <span>{props.rating}</span>
         </span>
         {/*image based off this.props.rating */}
         <span className='smallestText'>
-          <span>#ratings</span>
-          {/* this.props.numRatings */}
+          <span>{props.numratings}</span>
         </span>
       </div>
     </span>

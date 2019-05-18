@@ -1,23 +1,26 @@
 {
-  "name": "",
+  "name": "related-carousel",
   "version": "",
   "description": "",
-  "author": "",
+  "author": "Cam Stuart",
   "license": "",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
     "build": "webpack -d --watch",
-    "start": "nodemon --ignore node_modules server"
+    "start": "nodemon --ignore node_modules server",
+    "seed": "node ./server/scripts/seed.js"
   },
   "dependencies": {
-    "lodash": "^4.17.4",
     "bluebird": "^3.3.4",
     "body-parser": "^1.17.0",
+    "bootstrap": "^4.3.1",
     "express": "^4.15.0",
+    "lodash": "^4.17.4",
     "mongoose": "^4.9.6",
     "react": "^15.4.2",
+    "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^15.4.2"
   },
   "devDependencies": {

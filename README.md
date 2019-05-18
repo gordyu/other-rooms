@@ -26,7 +26,7 @@ service runs on port :3001
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
-- Node 10.15.1
+- Node version >=6.13.0 (10.15.1)
 - "dependencies": {
     "lodash": "^4.17.4",
     "bluebird": "^3.3.4",

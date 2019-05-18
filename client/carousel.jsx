@@ -15,9 +15,9 @@ class Carousel extends React.Component{
   render() {
     return (
       <div>
-        {/*
-        {this.props.homes.map((home) => {
-          return <Home 
+        {this.props.homes.map((home, index) => {
+          return <Home
+          key={index} 
           type={home.type}
           description={home.description}
           location={home.location}
@@ -27,13 +27,6 @@ class Carousel extends React.Component{
           image={home.image}
           />
         })}
-         */}
-        <Home />
-        <Home />
-        <Home />
-        <Home />
-        <Home />
-        <Home />
       </div>
     )
   }
