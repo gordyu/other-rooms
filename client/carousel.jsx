@@ -1,9 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Carousel from 'react-bootstrap/Carousel'
 import Home from './home.jsx'
 
 //holds individual homes, might be refactored to stateless if no state is required
-class Carousel extends React.Component{
+class RelatedCarousel extends React.Component{
   constructor(props){
     super(props)
 
@@ -14,9 +15,12 @@ class Carousel extends React.Component{
 
   render() {
     return (
-      <div>
+      <Carousel>
+        
         {this.props.homes.map((home, index) => {
-          return <Home
+          return(
+          <Carousel.Item>
+          <Home
           key={index} 
           type={home.type}
           description={home.description}
@@ -26,8 +30,10 @@ class Carousel extends React.Component{
           price={home.price}
           image={home.image}
           />
+          </Carousel.Item>
+          )
         })}
-      </div>
+      </Carousel>
     )
   }
 

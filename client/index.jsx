@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Carousel from './carousel.jsx'
+import RelatedCarousel from './carousel.jsx'
 //import X from 'Y'
 
 //holds the currents related homes in state and renders a Carousel with those databse objects passed in. makes get request with fetch to API to populate the related array
@@ -35,7 +35,7 @@ class App extends React.Component {
     return (
       <div>
         <h2>More homes you may like</h2>
-        <Carousel homes={this.state.related}/>
+        <RelatedCarousel homes={this.state.related}/>
       </div>
     )
   }
