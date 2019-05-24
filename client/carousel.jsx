@@ -8,7 +8,7 @@ class RelatedCarousel extends React.Component{
   constructor(props){
     super(props)
 
-      this.state = {
+    this.state = {
         //possibly need to maintain the motion of the carousel, otherwise may not need to be stateful
       }
   }
@@ -19,17 +19,16 @@ class RelatedCarousel extends React.Component{
         
         {this.props.homes.map((home, index) => {
           return(
-          <Carousel.Item>
-          <Home
-          key={index} 
-          type={home.type}
-          description={home.description}
-          location={home.location}
-          rating={home.rating}
-          numRatings={home.numRatings}
-          price={home.price}
-          image={home.image}
-          />
+          <Carousel.Item key={index}>
+            <Home 
+            type={home.type}
+            description={home.description}
+            location={home.location}
+            rating={home.rating}
+            numRatings={home.numRatings}
+            price={home.price}
+            image={home.image}
+            />
           </Carousel.Item>
           )
         })}
@@ -39,4 +38,4 @@ class RelatedCarousel extends React.Component{
 
 }
 
-export default Carousel
+export default RelatedCarousel

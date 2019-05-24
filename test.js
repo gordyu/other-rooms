@@ -6,10 +6,8 @@ var Home = require('./db/index.js');
 var {getRelatedHomes} = require('./db/HomeController.js')
 
 chai.use(require('chai-things'))
-
-describe('API', function () {
-
-  describe('/related', function () {
+describe('Related Carousel', function() {
+  describe('API', function () {
 
     describe('GET', function () {
 
@@ -27,23 +25,20 @@ describe('API', function () {
           .expect(Array.isArray(res.body)).to.be(true)
           .done()
       })
-
     });
-
   });
 
-});
-
-describe('DB', function() {
-  describe('seeding', function() {
-    Home.find({}, (err, result) => {
-      if(err){
-        console.log(err)
-        expect(err).to.be(null)
-      } else {
-        expect(result.length).to.equal(100)
-      }
+  describe('DB', function() {
+    describe('seeding', function() {
+      Home.find({}, (err, result) => {
+        if(err){
+          console.log(err)
+          expect(err).to.be(null)
+        } else {
+          expect(result.length).to.equal(100)
+        }
+      })
     })
   })
-
 })
+

@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Bootstrap from '../node_modules/bootstrap/dist/css/bootstrap.css';
 import RelatedCarousel from './carousel.jsx'
 //import X from 'Y'
 
@@ -8,7 +9,7 @@ import RelatedCarousel from './carousel.jsx'
 class App extends React.Component {
   constructor(props){
     super(props)
-
+    
     this.state = {
       related: []
     }
