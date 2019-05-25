@@ -10,25 +10,33 @@
   "scripts": {
     "build": "webpack -d --watch",
     "start": "nodemon --ignore node_modules server",
+    "test": "mocha ./test.js",
     "seed": "node ./server/scripts/seed.js"
   },
   "dependencies": {
     "bluebird": "^3.3.4",
     "body-parser": "^1.17.0",
     "bootstrap": "^4.3.1",
+    "chai": "^4.1.2",
+    "chai-things": "^0.2.0",
     "express": "^4.15.0",
     "lodash": "^4.17.4",
+    "mocha": "^5.2.0",
     "mongoose": "^4.9.6",
-    "react": "^15.4.2",
+    "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.8",
-    "react-dom": "^15.4.2"
+    "react-dom": "^16.8.6",
+    "sinon": "^6.3.4",
+    "supertest": "^1.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-loader": "^6.3.2",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.23.0",
-    "webpack": "^2.2.1",
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+    "css-loader": "^2.1.1",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "style-loader": "^0.23.1",
+    "webpack": "^2.2.1"
   }
 }
