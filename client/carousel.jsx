@@ -15,7 +15,7 @@ class RelatedCarousel extends React.Component{
 
   render() {
     return (
-      <Carousel>
+      <Carousel interval={false} activeIndex={0}>
         
         {this.props.homes.map((home, index) => {
           return(
