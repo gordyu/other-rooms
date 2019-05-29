@@ -6,13 +6,13 @@ import StarRatings from 'react-star-ratings'
 var Home = (props) => (
   <div className='home' style={{
     cursor: 'pointer',
-    height:'50%',
-    width:'50%'
+    height:'620px',
+    width:'332px'
   }}>
     <button className='favorite'>Favorite(get me inside image)</button>
     {/* onClick={launch modal for sign in} */}
     <div className='homeImg' style={{
-      height: '66%',
+      height: '50%',
       width: '100%'
     }}> 
     <img src={props.image} style={{

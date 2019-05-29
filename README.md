@@ -22,7 +22,10 @@
 
 service runs on port :3001
 
+App will render to div with #id: 'related'
+
 ## Requirements
+
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 

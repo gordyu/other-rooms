@@ -3,6 +3,10 @@ var expect = chai.expect;
 var request = require('supertest');
 var app = require('./server/index.js');
 var Home = require('./db/index.js');
+var renderer = require('react-test-renderer')
+var React = require('react')
+var {shallow} = require('enzyme')
+var App = require('./client/index.jsx')
 var {getRelatedHomes} = require('./db/HomeController.js');
 
 chai.use(require('chai-things'))
@@ -65,6 +69,16 @@ describe('Related Carousel', function() {
           }
         })
       })
+    })
+  })
+  
+  describe('front-end carousel', function() {
+    test('holds home entries in state', () =>{
+
+      const carousel = shallow(<App />)
+
+      expect(carousel.state(related)).to.be.a('array')
+      expect(carousel.state(related).length).to.equal(12)
     })
   })
 })
