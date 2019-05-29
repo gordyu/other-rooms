@@ -1,16 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import StarRatings from 'react-star-ratings'
 
 //renders each property of the passed in home object and holds the majority of the app's JSX
 var Home = (props) => (
   <div className='home' style={{
-    cursor: 'pointer'
+    cursor: 'pointer',
+    height:'50%',
+    width:'50%'
   }}>
     <button className='favorite'>Favorite(get me inside image)</button>
     {/* onClick={launch modal for sign in} */}
     <div className='homeImg' style={{
-      height: '33%',
-      width: '33%'
+      height: '66%',
+      width: '100%'
     }}> 
     <img src={props.image} style={{
       width: '100%',
@@ -49,7 +52,13 @@ var Home = (props) => (
       </div>
       <div className='ratings'>
         <span className='stars'>
-          <span>{props.rating}</span>
+          <StarRatings
+          rating={props.rating}
+          starRatedColor= 'rgb(13, 114, 118)'
+          numberOfStars={5}
+          starDimension='10px'
+          starSpacing='0px'
+          />
         </span>
         {/*image based off this.props.rating */}
         <span className='smallestText' style={{
