@@ -34,7 +34,17 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{
+        fontFamily: 'Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif',
+        fontSize: '14px',
+        lineHeight: '1.43',
+        color: '#484848',
+        backgroundColor: '#fff',
+        marginTop: '16px',
+        marginBottom: '24px',
+        height:'30%',
+        width:'100%',
+        }}>
         <h2>More homes you may like</h2>
         <RelatedCarousel homes={this.state.related}/>
       </div>
