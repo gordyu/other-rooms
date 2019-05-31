@@ -6,19 +6,27 @@ import StarRatings from 'react-star-ratings'
 var Home = (props) => (
   <div className='home' style={{
     cursor: 'pointer',
-    height:'620px',
-    width:'332px'
+    width:'100%',
+    paddingRight:'8px',
+    paddingLeft:'8px',
+    gridColumn:`${props.index} / ${props.index + 1}`,
+    gridRow:'1'
   }}>
-    <button className='favorite'>Favorite(get me inside image)</button>
+
     {/* onClick={launch modal for sign in} */}
     <div className='homeImg' style={{
-      height: '50%',
-      width: '100%'
+      width:'300px',
+      height:'210px',
+      backgroundImage:`url("${props.image}")`, backgroundSize:'cover',
+      backgroundPosition: 'center'
     }}> 
-    <img src={props.image} style={{
-      width: '100%',
-      height:'100%'
-    }}></img>
+    <i className="far fa-heart fa-2x"
+    style = {{
+      top:'8%',
+      left:'87%',
+      position:'relative'
+    }}
+    ></i>
     </div>
     <span className='text'>
       <span className='nameAndLoc'>

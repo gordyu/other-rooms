@@ -42,8 +42,8 @@ class App extends React.Component {
         backgroundColor: '#fff',
         marginTop: '16px',
         marginBottom: '24px',
-        boxSizing: 'border-box',
-        display: 'block'
+        height:'30%',
+        width:'100%',
         }}>
         <h2>More homes you may like</h2>
         <RelatedCarousel homes={this.state.related}/>
