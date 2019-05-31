@@ -18,13 +18,15 @@ var Home = (props) => (
       width:'300px',
       height:'210px',
       backgroundImage:`url("${props.image}")`, backgroundSize:'cover',
-      backgroundPosition: 'center'
+      backgroundPosition: 'center',
+      borderRadius:'3px'
     }}> 
     <i className="far fa-heart fa-2x"
     style = {{
       top:'8%',
       left:'87%',
-      position:'relative'
+      position:'relative',
+      color:'white'
     }}
     ></i>
     </div>

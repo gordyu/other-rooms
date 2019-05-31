@@ -2,11 +2,17 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const {getRelatedHomes} = require('../db/HomeController.js')
 const app = express()
+const cors = require('cors')
 const port = 3001
+
+const header = {
+  "Access-Control-Allow-Origin":'*'
+}
 
 
 app.use(express.static(__dirname + '/../public'))
 app.use(bodyParser.json())
+app.use(cors())
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`)

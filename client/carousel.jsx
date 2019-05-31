@@ -41,14 +41,13 @@ class RelatedCarousel extends React.Component{
   render() {
     return (
       <div>
-        <div 
+        <div
         style={{
           float:'left',
           cursor:'pointer',
-          marginTop:'15%',
+          marginTop:'10%',
           visibility: `${this.state.position === 0 ?'hidden' : 'visible'}`
           }}
-        onClick={this.prevCard.bind(this)}
           >
           <i 
           className="fas fa-chevron-left"
@@ -56,8 +55,8 @@ class RelatedCarousel extends React.Component{
           ></i>
         </div>
         <div style={{
-          marginTop:'15%',
-          marginRight:'25%',
+          marginTop:'10%',
+          marginRight:'35%',
           float:'right',
           overflow:'visible',
           visibility:`${this.state.position === 10 ?'hidden' : 'visible'}`
@@ -77,7 +76,7 @@ class RelatedCarousel extends React.Component{
               transition:'transform ease-out 0.45s',
               display:'grid',
               boxSizing:'border-box',
-              gridTemplateColumns:'repeat(12, 50%)',
+              gridTemplateColumns:'repeat(12, 33%)',
               position:'relative'
             }}>
             {this.props.homes.map((home, index) => {

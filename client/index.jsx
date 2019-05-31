@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Bootstrap from '../node_modules/bootstrap/dist/css/bootstrap.css';
 import RelatedCarousel from './carousel.jsx'
 //import X from 'Y'
 
@@ -45,7 +44,9 @@ class App extends React.Component {
         height:'30%',
         width:'100%',
         }}>
-        <h2>More homes you may like</h2>
+        <h2 style={{
+          fontSize:'24px'
+        }}>More homes you may like</h2>
         <RelatedCarousel homes={this.state.related}/>
       </div>
     )
