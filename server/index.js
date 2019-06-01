@@ -27,3 +27,5 @@ app.listen(port, () => {
       }
     })
   }) 
+
+module.exports = app
