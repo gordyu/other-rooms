@@ -42,11 +42,9 @@ class App extends React.Component {
         marginTop: '16px',
         marginBottom: '24px',
         height:'30%',
-        width:'100%',
+        width:'90%',
         }}>
-        <h2 style={{
-          fontSize:'24px'
-        }}>More homes you may like</h2>
+
         <RelatedCarousel homes={this.state.related}/>
       </div>
     )

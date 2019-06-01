@@ -7,8 +7,6 @@ var Home = (props) => (
   <div className='home' style={{
     cursor: 'pointer',
     width:'100%',
-    paddingRight:'8px',
-    paddingLeft:'8px',
     gridColumn:`${props.index} / ${props.index + 1}`,
     gridRow:'1'
   }}>
