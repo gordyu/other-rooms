@@ -15,7 +15,7 @@ class RelatedCarousel extends React.Component{
   }
 
   nextCard() {
-    if(this.state.position < (this.props.homes.length - 2)){
+    if(this.state.position < (this.props.homes.length - 3)){
       console.log('next')
       this.setState({
         position: this.state.position + 1,
@@ -41,14 +41,16 @@ class RelatedCarousel extends React.Component{
   render() {
     return (
       <div>
-        <div 
+
+        <div
         style={{
           float:'left',
           cursor:'pointer',
-          marginTop:'15%',
-          visibility: `${this.state.position === 0 ?'hidden' : 'visible'}`
+          marginTop:'10%',
+          visibility: `${this.state.position === 0 ?'hidden' : 'visible'}`,
+          overflow:'visible',
+          marginLeft:'10%'
           }}
-        onClick={this.prevCard.bind(this)}
           >
           <i 
           className="fas fa-chevron-left"
@@ -56,8 +58,8 @@ class RelatedCarousel extends React.Component{
           ></i>
         </div>
         <div style={{
-          marginTop:'15%',
-          marginRight:'25%',
+          marginTop:'10%',
+          marginRight:'35%',
           float:'right',
           overflow:'visible',
           visibility:`${this.state.position === 10 ?'hidden' : 'visible'}`
@@ -69,15 +71,19 @@ class RelatedCarousel extends React.Component{
         </div>
         <div style={{
           overflow:'hidden',
-          marginLeft:'8px'
+          marginLeft:'10%',
+          marginRight:'10%'
         }}>
+        <h2 style={{
+          fontSize:'24px'
+        }}>More homes you may like</h2>
           <div 
             style={{
               transform: `translateX(${this.state.translate}px)`,
               transition:'transform ease-out 0.45s',
               display:'grid',
               boxSizing:'border-box',
-              gridTemplateColumns:'repeat(12, 50%)',
+              gridTemplateColumns:'repeat(12, 35%)',
               position:'relative'
             }}>
             {this.props.homes.map((home, index) => {

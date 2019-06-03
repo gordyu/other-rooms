@@ -7,8 +7,6 @@ var Home = (props) => (
   <div className='home' style={{
     cursor: 'pointer',
     width:'100%',
-    paddingRight:'8px',
-    paddingLeft:'8px',
     gridColumn:`${props.index} / ${props.index + 1}`,
     gridRow:'1'
   }}>
@@ -18,13 +16,15 @@ var Home = (props) => (
       width:'300px',
       height:'210px',
       backgroundImage:`url("${props.image}")`, backgroundSize:'cover',
-      backgroundPosition: 'center'
+      backgroundPosition: 'center',
+      borderRadius:'3px'
     }}> 
     <i className="far fa-heart fa-2x"
     style = {{
       top:'8%',
       left:'87%',
-      position:'relative'
+      position:'relative',
+      color:'white'
     }}
     ></i>
     </div>
