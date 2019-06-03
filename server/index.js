@@ -5,10 +5,6 @@ const app = express()
 const cors = require('cors')
 const port = 3001
 
-const header = {
-  "Access-Control-Allow-Origin":'*'
-}
-
 
 app.use(express.static(__dirname + '/../public'))
 app.use(bodyParser.json())
