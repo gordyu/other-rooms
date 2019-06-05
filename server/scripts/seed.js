@@ -46,7 +46,9 @@ var generate = () => {
 let seedData = []
 
 for(let i = 0; i < 100; i++) {
-  seedData.push(generate())
+  let newHome = generate();
+  newHome.id = i;
+  seedData.push(newHome);
 }
 
 //delete old data and insert genereated data into database

@@ -1,8 +1,12 @@
 // model and schema exports
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+
 mongoose.connect('mongodb://localhost/fetcher');
 
+
+
 const homeSchema = mongoose.Schema({
+  id: Number,
   type: String,
   tags: String,
   price: Number,
@@ -11,8 +15,9 @@ const homeSchema = mongoose.Schema({
   numRatings: Number,
   description: String,
   image: String
-})
+});
 
-const Home = mongoose.model('Home', homeSchema)
 
-module.exports = Home
+const Home = mongoose.model('Home', homeSchema);
+
+module.exports = Home;

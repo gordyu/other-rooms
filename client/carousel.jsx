@@ -37,7 +37,7 @@ class RelatedCarousel extends React.Component{
   slideWidth() {
     return (document.querySelector('.home').clientWidth)
   }
- 
+
   render() {
     return (
       <div>
@@ -52,7 +52,7 @@ class RelatedCarousel extends React.Component{
           marginLeft:'10%'
           }}
           >
-          <i 
+          <i
           className="fas fa-chevron-left"
           onClick={this.prevCard.bind(this)}
           ></i>
@@ -64,7 +64,7 @@ class RelatedCarousel extends React.Component{
           overflow:'visible',
           visibility:`${this.state.position === 10 ?'hidden' : 'visible'}`
         }}>
-          <i 
+          <i
           className="fas fa-chevron-right"
           onClick={this.nextCard.bind(this)}
           ></i>
@@ -77,7 +77,7 @@ class RelatedCarousel extends React.Component{
         <h2 style={{
           fontSize:'24px'
         }}>More homes you may like</h2>
-          <div 
+          <div
             style={{
               transform: `translateX(${this.state.translate}px)`,
               transition:'transform ease-out 0.45s',
@@ -105,7 +105,7 @@ class RelatedCarousel extends React.Component{
           </div>
         </div>
       </div>
-    );  
+    );
   }
 }
 

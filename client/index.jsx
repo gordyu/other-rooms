@@ -8,7 +8,7 @@ import RelatedCarousel from './carousel.jsx'
 class App extends React.Component {
   constructor(props){
     super(props)
-    
+
     this.state = {
       related: []
     }
@@ -16,7 +16,7 @@ class App extends React.Component {
 
   //make request to api for related homes and populate state
   getRelated() {
-    fetch('http://localhost:3001/related')
+    fetch('http://localhost:3003/related')
     .then((result) => {
       return result.json()
     })
