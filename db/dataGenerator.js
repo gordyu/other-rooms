@@ -23,7 +23,7 @@ generate = (id) => {
   return entry;
 };
 
-for(let i = 0; i < 100; i++) {
+for(let i = 0; i < 100000; i++) {//Breaks when using 1,000,000 Documents
   let newHome = generate(i);
   newHome.id = i;
   seedData.push(newHome);
