@@ -11,7 +11,8 @@
     "build": "webpack -d --watch",
     "start": "nodemon --ignore node_modules server",
     "test": "jest",
-    "seed": "node ./server/scripts/seedMongoDB.js"
+    "seed-data": "node ./db/dataGenerator.js",
+    "seed": "node ./db/MongoDB/seedMongoDB.js"
   },
   "dependencies": {
     "bluebird": "^3.3.4",
