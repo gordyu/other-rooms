@@ -15,8 +15,8 @@ module.exports.getRelatedHomes = () => {
   return Home.query('SELECT * FROM homes LIMIT 12;');
 };
 
-module.exports.postRelatedHome = ({type, tags, price, description, image}, callback) => {
-  Home.query(`INSERT INTO homes (type, tags, price, description, image) VALUES ('${type}', '${tags}', '${price}', '${description}', '${image}');`, callback);
+module.exports.postRelatedHome = ({type, tags, price, description, image}) => {
+  return Home.query(`INSERT INTO homes (type, tags, price, description, image) VALUES ('${type}', '${tags}', '${price}', '${description}', '${image}');`);
 };
 
 module.exports.updateRelatedHome = (id, updates, callback) => {

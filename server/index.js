@@ -19,20 +19,16 @@ app.listen(port, () => {
 // handles requests to populate related homes in client
 app.post('/related', (req, res) => {//CREATE
   let newHome = req.body.home;
-  dbController.getLastId((err, lastId) => {
+  dbController.postRelatedHome(newHome)
+  .then(() => {
+    res.sendStatus(200);
+    })
+  .catch((err) => {
     if(err){
       console.log(err);
-      return;
+      res.sendStatus(500);
     }
-    newHome.id = lastId + 1;
-    dbController.postRelatedHome(newHome, (err) => {
-      if(err){
-        console.log(err);
-        return;
-      }
-      res.sendStatus(200);
-    })
-  });
+    });
 });
 app.get('/related', (req, res) => {//READ
   dbController.getRelatedHomes()
