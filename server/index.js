@@ -1,6 +1,7 @@
 const express = require('express');;
 const bodyParser = require('body-parser');
-const dbController = require('../db/MongoDB/HomeController.js');
+// const dbController = require('../db/MongoDB/HomeController.js');
+const dbController = require('../db/PostgreSQL/HomeController.js');
 const app = express();
 const cors = require('cors');
 const morgan = require('morgan');
