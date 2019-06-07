@@ -35,18 +35,17 @@ app.post('/related', (req, res) => {//CREATE
   });
 });
 app.get('/related', (req, res) => {//READ
-  //trigger database query for 12 entries
-  //sorting and establishing of relation should be handled within the function that makes the query
-  let thisHome = req.body;
-  dbController.getRelatedHomes(thisHome, (err, result) => {
-    if(err) {
-      console.log(err);
-      res.status(403).send(err);
-    } else {
+  dbController.getRelatedHomes()
+  .then((result) => {
       // sends the sorted results back to the client
-      res.status(200).send(result);
-    }
-  });
+      res.status(200).send(result.rows);
+    })
+  .catch((err) => {
+      if(err) {
+        console.log(err);
+        res.status(403).send(err);
+      }
+    });
 });
 app.put('/related/:id', (req, res) => {//UPDATE
   if (req.params.id ){

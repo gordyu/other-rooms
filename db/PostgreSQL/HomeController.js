@@ -11,10 +11,8 @@ module.exports.getLastId = (callback) => {
   })
 };
 
-module.exports.getRelatedHomes = (home, callback) => {
-  Home.query('SELECT * FROM homes LIMIT 12;', (err, results) => {
-    callback(err, results.rows);
-  });
+module.exports.getRelatedHomes = () => {
+  return Home.query('SELECT * FROM homes LIMIT 12;');
 };
 
 module.exports.postRelatedHome = ({type, tags, price, description, image}, callback) => {
