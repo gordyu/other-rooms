@@ -59,16 +59,17 @@ app.put('/related/:id', (req, res) => {//UPDATE
 app.delete('/related/:id', (req, res) => {//DELETE
   console.log('Deleting Home', req.params.id);
   if(req.params.id){
-    dbController.deleteRelatedHome(req.params.id, (err) => {
-      if(err){
-        console.log(err);
-        return;
-      }
-      res.sendStatus(200);
+    dbController.deleteRelatedHome(req.params.id)
+    .then(() => {
       console.log('Successfully deleted Home', req.params.id);
+      res.sendStatus(200);
+    })
+    .catch((err) => {
+      console.log(err);
+      console.log(500)
     });
   } else {
-    res.sendStatus(200);
+    res.sendStatus(400);
   }
 });
 

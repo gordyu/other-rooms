@@ -33,6 +33,6 @@ module.exports.updateRelatedHome = (id, updates) => {
   return Home.query(`UPDATE homes SET ${str} WHERE id=${id};`);
 };
 
-module.exports.deleteRelatedHome = (id, callback) => {
-  Home.query(`DELETE FROM homes WHERE id=${id}`, callback);
+module.exports.deleteRelatedHome = (id) => {
+  return Home.query(`DELETE FROM homes WHERE id=${id}`);
 };
