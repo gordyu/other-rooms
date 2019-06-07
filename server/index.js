@@ -37,24 +37,23 @@ app.get('/related', (req, res) => {//READ
       res.status(200).send(result.rows);
     })
   .catch((err) => {
-      if(err) {
-        console.log(err);
-        res.status(403).send(err);
-      }
+    console.log(err);
+    res.status(403).send(err);
     });
 });
 app.put('/related/:id', (req, res) => {//UPDATE
   if (req.params.id ){
-    dbController.updateRelatedHome(req.params.id, req.body.updates, (err, document) => {
-      if (err){
-        console.log(err);
-        return;
-      }
-      console.log('Successfully updated Home', document.id);
+    dbController.updateRelatedHome(req.params.id, req.body.updates)
+    .then(() => {
+      console.log('Successfully updated Home');
       res.sendStatus(200);
-    });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.sendStatus(500);
+    })
   } else {
-    res.sendStatus(200);
+    res.sendStatus(400);
   }
 });
 app.delete('/related/:id', (req, res) => {//DELETE

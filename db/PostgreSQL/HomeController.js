@@ -19,7 +19,7 @@ module.exports.postRelatedHome = ({type, tags, price, description, image}) => {
   return Home.query(`INSERT INTO homes (type, tags, price, description, image) VALUES ('${type}', '${tags}', '${price}', '${description}', '${image}');`);
 };
 
-module.exports.updateRelatedHome = (id, updates, callback) => {
+module.exports.updateRelatedHome = (id, updates) => {
   //Will probably use ES6 to map updates keys to a string of properties to update
   var str = Object.keys(updates).reduce((arr, key, index) => {
     if (Number.isInteger(updates[key])){
@@ -30,7 +30,7 @@ module.exports.updateRelatedHome = (id, updates, callback) => {
     return arr;
   }, []).join(', ');
   console.log('Updating the following:', str);
-  Home.query(`UPDATE homes SET ${str} WHERE id=${id};`, callback);
+  return Home.query(`UPDATE homes SET ${str} WHERE id=${id};`);
 };
 
 module.exports.deleteRelatedHome = (id, callback) => {
