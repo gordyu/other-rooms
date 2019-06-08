@@ -34,6 +34,13 @@ app.get('/related', (req, res) => {//READ
   dbController.getRelatedHomes()
   .then((result) => {
       // sends the sorted results back to the client
+      result.rows.forEach((row) => {
+        for (let key in row){
+          if (key === 'price' || key === 'rating' || key === 'numratings'){
+            row[key] = Number(row[key]);
+          }
+        }
+      });
       res.status(200).send(result.rows);
     })
   .catch((err) => {
