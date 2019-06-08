@@ -36,3 +36,7 @@ module.exports.updateRelatedHome = (id, updates) => {
 module.exports.deleteRelatedHome = (id) => {
   return Home.query(`DELETE FROM homes WHERE id=${id}`);
 };
+
+module.exports.deleteAllRelatedHomes = () => {
+  return Home.query('DELETE FROM homes;');
+}
