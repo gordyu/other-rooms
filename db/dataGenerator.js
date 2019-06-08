@@ -29,11 +29,7 @@ generate = (id) => {
   return entry;
 };
 
-// for(let i = 0; i < 100000; i++) {//Breaks when using 1,000,000 Documents
-//   let newHome = generate(i);
-//   seedData.push(newHome);
 
-// }
 console.log(`Creating data.txt file at ${Date()}`);
 fs.writeFile(filepath, '', (err) => {
   if (err){
@@ -56,7 +52,7 @@ fs.writeFile(filepath, '', (err) => {
         return;
       }
       let {id, type, tags, price, description, location, rating, numRatings, image} = generate(count);
-      fs.write(fd, `${id}\t${type}\t ${tags}\t ${price}\t ${description}\t ${location}\t ${rating}\t ${numRatings}\t${image}\n`, (err) => {
+      fs.write(fd, `${id}\t${type}\t${tags}\t${price}\t${description}\t${location}\t${rating}\t${numRatings}\t${image}\n`, (err) => {
         if(err){
           console.log(`Error writting row ${count}: ${err}`);
           return;
