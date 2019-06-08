@@ -15,14 +15,21 @@
 1. [Requirements](#requirements)
 1. [Development](#development)
 
-## Usage
+## Get Started
 
-> serve service: npm run start 
-"start": "nodemon --ignore node_modules server"
+1. Start your MongoDB database service
+    * If using WSL/ Ubuntu, you can use the command ``` sudo service mongodb start ``` to start the service.
 
-service runs on port :3001
+2. Create seed data
+    * In your terminal you can use the command ``` npm run seed-data ``` to run the seed data generation script
 
-App will render to div with #id: 'related'
+3. Seed the Database with the generated seed-data
+    * In your terminal you can use the command ``` npm run seed ``` to run the seeding data script
+
+4. Run the server
+    * Use the ``` npm start ``` script to start the server
+
+5. Open your browser on localhost: 3003
 
 ## Requirements
 
