@@ -11,7 +11,7 @@ client.connect()
     .then(() => {//USING KEYSPACE sdc_project
       console.log(`Successfully using sdc_project database.`);
       client.execute(`CREATE TABLE IF NOT EXISTS sdc_project.homes (
-        id int,
+        id UUID,
         type text,
         tags text,
         price int,
