@@ -4,7 +4,7 @@ const client = new cassandra.Client({contactPoints:['127.0.0.1:9042'], localData
 client.connect()
 .then(() => { //CONNECTED TO DATABASE
   console.log(`Successfully connected to database`);
-  client.execute(`CREATE KEYSPACE IF NOT EXISTS sdc_project WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '3' };`)
+  client.execute(`CREATE KEYSPACE IF NOT EXISTS sdc_project WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1' };`)
   .then(() => {//CREATED KEYSPACE sdc_project
     console.log(`Keyspace sdc_project successfully created.`);
     client.execute(`USE sdc_project;`)
@@ -14,11 +14,11 @@ client.connect()
         id UUID,
         type text,
         tags text,
-        price int,
+        price decimal,
         description text,
         location text,
-        rating int,
-        numRatings int,
+        rating decimal,
+        numRatings decimal,
         image text,
         PRIMARY KEY (id)
       );`)
