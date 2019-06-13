@@ -34,7 +34,7 @@ app.get('/related', (req, res) => {//READ
   dbController.getRelatedHomes()
   .then((result) => {
       // sends the sorted results back to the client
-      console.log(result);
+      // console.log(result);
       res.status(200).send(result.rows);
     })
   .catch((err) => {

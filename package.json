@@ -15,6 +15,7 @@
     "seed": "node ./db/Cassandra/seedCassandra.js"
   },
   "dependencies": {
+    "async": "^3.0.1",
     "bluebird": "^3.3.4",
     "body-parser": "^1.17.0",
     "cassandra-driver": "^4.1.0",
@@ -22,6 +23,7 @@
     "chai-things": "^0.2.0",
     "classnames": "^2.2.6",
     "cors": "^2.8.5",
+    "csv-parse": "^4.4.3",
     "express": "^4.15.0",
     "lodash": "^4.17.4",
     "mocha": "^5.2.0",
@@ -35,8 +37,10 @@
     "react-star-ratings": "^2.3.0",
     "sequelize": "^5.8.7",
     "sinon": "^6.3.4",
+    "stream-transform": "^2.0.1",
     "supertest": "^1.1.0",
-    "supports-color": "^6.1.0"
+    "supports-color": "^6.1.0",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.4.5",

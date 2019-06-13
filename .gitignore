@@ -1,3 +1,5 @@
 node_modules
 ./public/bundle.js
 ./db/data.txt
+import_sdc*
+data.csv
