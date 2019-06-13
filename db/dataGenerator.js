@@ -1,14 +1,15 @@
 const faker = require('faker');
 const fs = require('fs');
 const path = require('path');
+const uuidv1 = require('uuid/v1');
 
 // const seedData = [];
-const filepath = path.join(__dirname, '/data.txt');
+const filepath = path.join(__dirname, '/data.csv');
 
 generate = (id) => {
   let entry = {};
 
-  entry.id = id;
+  entry.id = uuidv1();
 
   entry.type = faker.lorem.sentence(3);
 
