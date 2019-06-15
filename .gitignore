@@ -2,3 +2,4 @@ node_modules
 ./public/bundle.js
 ./db/data.txt
 data.csv
+newRelicHelper.js

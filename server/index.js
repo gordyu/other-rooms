@@ -5,6 +5,7 @@ const dbController = require('../db/PostgreSQL/HomeController.js');
 const app = express();
 const cors = require('cors');
 const morgan = require('morgan');
+const newrelic = require('newrelic');
 const port = 3003;
 
 app.use(morgan('tiny'));
