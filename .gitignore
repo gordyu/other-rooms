@@ -3,3 +3,4 @@ node_modules
 ./db/data.txt
 data.csv
 newRelicHelper.js
+newrelic_agent.log
