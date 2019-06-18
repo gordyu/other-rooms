@@ -9,13 +9,10 @@ const newrelic = require('newrelic');
 const port = process.env.port || 3003;
 
 app.use(morgan('tiny'));
-app.use(express.static(__dirname + '/../public'));
+// app.use(express.static(__dirname + '/../public'));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.listen(port, () => {
-  console.log(`listening on port ${port}`);
-});
 
 // handles requests to populate related homes in client
 app.post('/related', (req, res) => {//CREATE
@@ -23,20 +20,20 @@ app.post('/related', (req, res) => {//CREATE
   dbController.postRelatedHome(newHome)
   .then(() => {
     res.sendStatus(200);
-    })
+  })
   .catch((err) => {
     if(err){
       console.log(err);
       res.sendStatus(500);
     }
-    });
+  });
 });
 app.get('/related', (req, res) => {//READ
   dbController.getRelatedHomes()
   .then((result) => {
-      // sends the sorted results back to the client
-      result.rows.forEach((row) => {
-        for (let key in row){
+    // sends the sorted results back to the client
+    result.rows.forEach((row) => {
+      for (let key in row){
           if (key === 'price' || key === 'rating' || key === 'numratings'){
             row[key] = Number(row[key]);
           }
@@ -47,7 +44,7 @@ app.get('/related', (req, res) => {//READ
   .catch((err) => {
     console.log(err);
     res.status(403).send(err);
-    });
+  });
 });
 app.get('/related/:id', (req, res) => {
   dbController.getRelatedHome(req.params.id)
@@ -96,5 +93,8 @@ app.use((req, res) => {
   res.sendStatus(404);
 });
 
+app.listen(port, () => {
+  console.log(`listening on port ${port}`);
+});
 
 module.exports = app;
