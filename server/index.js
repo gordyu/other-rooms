@@ -52,7 +52,6 @@ app.get('/related', (req, res) => {//READ
 app.get('/related/:id', (req, res) => {
   dbController.getRelatedHome(req.params.id)
   .then((result) => {
-    console.log(result.rows[0]);
     res.status(200).send(result.rows[0]);
   })
   .catch((err) => {
