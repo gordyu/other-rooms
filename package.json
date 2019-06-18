@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "webpack -d --watch",
-    "start": "nodemon --ignore node_modules server",
+    "start": "node ./server/index.js",
     "test": "jest",
     "seed-data": "node ./db/dataGenerator.js",
     "seed": "node ./db/PostgreSQL/seedPostgreSQL.js"
