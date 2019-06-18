@@ -10,3 +10,4 @@ newrelic_agent.log
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+./db/PostgreSQL/rdsHelper.js
