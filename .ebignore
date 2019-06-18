@@ -1,0 +1,11 @@
+node_modules
+./public/bundle.js
+./db/data.txt
+data.csv
+newrelic_agent.log
+.gitignore
+.elasticbeanstalk/
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
