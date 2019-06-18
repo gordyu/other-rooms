@@ -1,11 +1,10 @@
 const { Client } = require('pg');
-const helper = require('./rdsHelper.js');
 
 const client = new Client({
-  user: helper.user,
+  user: 'postgres',
   host: 'database-1-postgresql.c5uqxdruaoki.us-east-1.rds.amazonaws.com',
   database: 'database-1-postgresql',
-  password: helper.password,
+  password: 'postgres',
   port: 5432
 });
 
