@@ -8,8 +8,9 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "build": "webpack -d",
-    "prestart": "webpack",
+    "build:prod": "./node_modules/.bin/webpack --mode production",
+    "build:dev": "./node_modules/.bin/webpack --mode development",
+    "prestart": "npm run build:prod",
     "start": "node ./server/index.js",
     "test": "jest",
     "seed-data": "node ./db/dataGenerator.js",
