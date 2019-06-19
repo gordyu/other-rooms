@@ -7,6 +7,7 @@ const cors = require('cors');
 const morgan = require('morgan');
 const newrelic = require('newrelic');
 const port = process.env.port || 3003;
+console.log("process.env.port: ", process.env.port);
 
 app.use(morgan('tiny'));
 // app.use(express.static(__dirname + '/../public'));
