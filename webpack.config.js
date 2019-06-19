@@ -26,6 +26,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.EnvironmentPlugin(['NODE_ENV', 'PORT'])
+    new webpack.DefinePlugin({
+      NODE_ENV: 'production',
+      PORT: 8081
+    })
   ]
 };
