@@ -16,7 +16,8 @@ class App extends React.Component {
 
   //make request to api for related homes and populate state
   getRelated() {
-    fetch('http://localhost:3003/related')
+    console.log(`PORT NUMBER:`, process.env.PORT);
+    fetch(`http://localhost:${process.env.PORT || 3003}/related`)
     .then((result) => {
       return result.json()
     })
