@@ -10,7 +10,7 @@ const port = process.env.PORT || 3003;
 console.log("process.env.port: ", process.env.port);
 
 app.use(morgan('tiny'));
-// app.use(express.static(__dirname + '/../public'));
+app.use(express.static(__dirname + '/../public'));
 app.use(bodyParser.json());
 app.use(cors());
 
