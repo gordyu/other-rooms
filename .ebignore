@@ -1,7 +1,5 @@
 node_modules
 ./public/bundle.js
-./db/data.txt
-data.csv
 newrelic_agent.log
 .gitignore
 .elasticbeanstalk/
