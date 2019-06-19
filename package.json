@@ -8,6 +8,7 @@
     "node": ">=6.13.0"
   },
   "scripts": {
+    "build": "webpack -d",
     "start": "node ./server/index.js",
     "test": "jest",
     "seed-data": "node ./db/dataGenerator.js",
