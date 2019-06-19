@@ -9,7 +9,6 @@
   },
   "scripts": {
     "build": "webpack -d --watch",
-    "prestart": "node ./db/PostgreSQL/seedPostgreSQL.js",
     "start": "node ./server/index.js",
     "test": "jest",
     "seed-data": "node ./db/dataGenerator.js",
