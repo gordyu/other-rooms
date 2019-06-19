@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 var SRC_DIR = path.join(__dirname, '/client');
 var DIST_DIR = path.join(__dirname, '/public');
 
@@ -13,15 +14,18 @@ module.exports = {
       {
         test : /\.jsx?/,
         include : SRC_DIR,
-        loader : 'babel-loader',      
+        loader : 'babel-loader',
         query: {
           presets: ['react', 'es2015']
         }
       },
-      { 
-        test: /\.css$/, 
-        loader: "style-loader!css-loader" 
+      {
+        test: /\.css$/,
+        loader: "style-loader!css-loader"
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.EnvironmentPlugin(['NODE_ENV', 'PORT'])
+  ]
 };
