@@ -43,7 +43,7 @@ fs.writeFile(filepath, '', (err) => {
       console.log(`Error opening document`);
       return;
     }
-    let limit = 10000000;
+    let limit = 2500000;
     console.log(`Successfully opened data.txt file at ${Date()}`);
     console.log(`Creating ${limit} rows for data.txt file at ${Date()}`);
     let writeHome = function(count) {
