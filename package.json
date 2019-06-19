@@ -15,6 +15,7 @@
     "seed": "node ./db/PostgreSQL/seedPostgreSQL.js"
   },
   "dependencies": {
+    "faker": "^4.1.0",
     "bluebird": "^3.3.4",
     "body-parser": "^1.17.0",
     "chai": "^4.1.2",
