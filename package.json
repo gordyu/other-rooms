@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "webpack -d",
-    "prestart": "webpack -d",
+    "prestart": "webpack",
     "start": "node ./server/index.js",
     "test": "jest",
     "seed-data": "node ./db/dataGenerator.js",
