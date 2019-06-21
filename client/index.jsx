@@ -16,7 +16,7 @@ class App extends React.Component {
 
   //make request to api for related homes and populate state
   getRelated() {
-    fetch(`/related`)
+    fetch(`http://ec2-34-232-43-62.compute-1.amazonaws.com/related`)
     .then((result) => {
       return result.json()
     })
