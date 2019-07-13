@@ -23,7 +23,7 @@
     "classnames": "^2.2.6",
     "cors": "^2.8.5",
     "express": "^4.15.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.13",
     "mocha": "^5.2.0",
     "mongoose": "^4.9.6",
     "mongoose-auto-increment": "^5.0.1",
